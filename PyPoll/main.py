@@ -15,3 +15,5 @@ with open ("Resources/election_data.csv", newline='') as file:
 candidates_with_votes=[]
 
 
+
+

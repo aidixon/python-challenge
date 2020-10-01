@@ -5,17 +5,12 @@ import csv
 #extracting the file path
 bank_csv = os.path.join("Resources", "budget_data.csv")
 
-#read file and skip header
+#read file, print header, skip header
 with open ("Resources/budget_data.csv", newline='') as file:
     csv_reader=csv.reader(file, delimiter=",")
-    header=next(csv_reader)
+    csv_header=next(csv_reader)
+    print(f"csvheader:{csv_header}")
 
-print(bank_csv)
+#print(bank_csv)
 
-    #Totalmonths=0
-    count = []
-    monthcount = 0
-
-
-#for row in 
-#
+    #Totalmonths
