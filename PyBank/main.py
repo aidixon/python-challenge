@@ -11,6 +11,7 @@ with open ("Resources/budget_data.csv", newline='') as file:
     csv_header=next(csv_reader)
     print(f"csvheader:{csv_header}")
 
-#print(bank_csv)
+
 
     #Totalmonths
+    

@@ -11,9 +11,19 @@ with open ("Resources/election_data.csv", newline='') as file:
     csv_header=next(csv_reader)
     print(f"csvheader:{csv_header}")
 
-#created a list for candidates that had votes
-candidates_with_votes=[]
+    #vote count
+    votes = 0
 
+    #dictionary of candidates
+    candidates_with_votes = {}
 
+    for Candidates in csv_reader:
+    votes += 1
+        #for row in csv_reader:
+        #Voter_ID = row[0]
+        #County = row[1]
+        #Candidate = row[2]    
+        #Voter_ID = float(Voter_ID)
+         
 
 
