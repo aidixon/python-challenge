@@ -45,4 +45,9 @@ with open ("Resources/budget_data.csv", newline='') as file:
             max_decrease = min(profit_change) + 1
             profit_change_sum = sum(profit_change)
             average = profit_change_sum / (change_in_profit)
-            profit_for_previous_month = profit_for_current_month
+            #profit_for_previous_month = profit_for_current_month
+
+#Print data
+            print(max_increase)
+            print(max_decrease)
+            print(profit_change)
