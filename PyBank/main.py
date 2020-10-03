@@ -11,7 +11,24 @@ with open ("Resources/budget_data.csv", newline='') as file:
     csv_header=next(csv_reader)
     print(f"csvheader:{csv_header}")
 
+#variables
+    months=[]
+    change_in_profit=[]
+
+#inital values
+    net = 0
+    profit_for_current_month = 0
+    profit_for_previous_month = 0
+
+#defining columns 
+    for row in csv_reader:
+        Date = str(row[0])
+        Profit_Losses = int(row[1])
+        
 
 
-    #Totalmonths
-    
+
+
+
+        
+

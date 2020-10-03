@@ -13,6 +13,7 @@ with open ("Resources/election_data.csv", newline='') as file:
 
     #vote count
     initial_votes = 0
+    #Voter_ID = (row[0])
     #total_votes = []
     
     #dictionary of candidates
@@ -22,21 +23,28 @@ with open ("Resources/election_data.csv", newline='') as file:
     #voter analysis 
     #total number of votes
     for row in csv_reader:
-        Voter_ID = int(row[0]) 
+        #Voter_ID = (row[0]) 
         initial_votes += 1 
-        Voter_ID = float(Voter_ID)
+        Voter_ID = float(row[0])
         
         total_votes = Voter_ID + initial_votes
         total_votes += 1
         print(f'TOTAL number of votes: {(total_votes)}')
         
-        #vote percentage 
-        
+    
         #County
-        County = str(row[1])
+        #County = str(row[1])
         
         #Candiate analysis
-        for candidates in csv_reader:
-            
-            Candidate = str(row[2])
+    for candidates in csv_reader:
+        candidates = (row[2])
+        #total_votes += 1
+
+        
+            #Candidate = str(row[2])
+        #if candidates in candidates_with_votes_dict:
+            #candidates_with_votes_dict[candidates]+=1
+        print(f'{candidates_with_votes_dict}')
+
+
         #if vote_percentage > 50:
