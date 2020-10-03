@@ -48,3 +48,5 @@ with open ("Resources/election_data.csv", newline='') as file:
 
 
         #if vote_percentage > 50:
+
+        
