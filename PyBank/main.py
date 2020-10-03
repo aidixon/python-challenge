@@ -35,12 +35,11 @@ with open ("Resources/budget_data.csv", newline='') as file:
         month.append(Date)
         if first_month > 1:
 
-#Profit for months 
+#Profits 
             change_in_profit = profit_for_current_month - profit_for_previous_month
             profit_change.append(change_in_profit)
 
 #Calulations 
-
             max_increase = max(profit_change) + 1
             max_decrease = min(profit_change) + 1
             profit_change_sum = sum(profit_change)
@@ -51,3 +50,4 @@ with open ("Resources/budget_data.csv", newline='') as file:
             print(max_increase)
             print(max_decrease)
             print(profit_change)
+            print(month)
