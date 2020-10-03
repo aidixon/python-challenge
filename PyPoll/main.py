@@ -12,18 +12,23 @@ with open ("Resources/election_data.csv", newline='') as file:
     print(f"csvheader:{csv_header}")
 
     #vote count
-    votes = 0
+    initial_votes = 0
+    adding_votes = votes+=1
 
     #dictionary of candidates
-    candidates_with_votes = {}
+    candidates_with_votes_dict= {}
 
-    for Candidates in csv_reader:
-    votes += 1
-        #for row in csv_reader:
-        #Voter_ID = row[0]
-        #County = row[1]
-        #Candidate = row[2]    
+    #for Candidates in csv_reader:
+        
+    for row in csv_reader:
+        Voter_ID = int(row[0])
+        County = str(row[1])
+        Candidate = str(row[2])
         #Voter_ID = float(Voter_ID)
+
+        #votes = Voter_ID + votes
+        print(f'TOTAL number of votes: {int(Voter_ID)}')
+        
          
 
 
