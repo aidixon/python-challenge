@@ -12,7 +12,7 @@ with open ("Resources/budget_data.csv", newline='') as file:
     print(f"csvheader:{csv_header}")
 
 #variables
-    month = []
+    #month = []
     maxmonth = []
     minmonth = []
     profit_change = []
@@ -31,28 +31,34 @@ with open ("Resources/budget_data.csv", newline='') as file:
         Profit_Losses = int(row[1])
         
 #Creating variables for Months
-        profit_for_current_month +=1
-        profit_for_current_month = int(Profit_Losses)
+        profit_for_current_month = (Profit_Losses)
         net_profit += int(Profit_Losses)
-        month.append(Date)
-        #if profit_for_current_month < 1:
-        for month in csv_reader:
-#Profits 
-            change_in_profit = profit_for_current_month - profit_for_previous_month
-            profit_change.append(change_in_profit)
+        maxmonth.append(Date)
+        minmonth.append(Date)
+        max(maxmonth)
+        min(minmonth)
+        
+#Profits       
+        if profit_for_current_month > 1:
+            for month in csv_reader: 
+                change_in_profit = profit_for_current_month - profit_for_previous_month
+                profit_change.append(change_in_profit)
 
 #Calulations 
-            max_increase = max(profit_change) + 1
-            max_decrease = min(profit_change) + 1
-            profit_change_sum = sum(profit_change)
-            average = profit_change_sum / change_in_profit
-            profit_for_previous_month = profit_for_current_month
-
+                profit_change_sum = sum(profit_change)
+                average = profit_change_sum / change_in_profit
+                max_increase = max(profit_change) + 1
+                max_decrease = min(profit_change) + 1
+            
+            
+                profit_for_previous_month = profit_for_current_month
 
 #Print data
-            print(max_increase)
-            print(max_decrease)
-            print(minmonth)
-            print(maxmonth)
-            print(profit_change)
-            print(month)
+                print(max_increase)
+                print(max_decrease)
+                print(profit_change)
+                print(minmonth)
+                print(maxmonth)
+
+
+output_file = os.path.join("..\Analysis", "output" "PyBank.csv")

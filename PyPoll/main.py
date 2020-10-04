@@ -47,7 +47,7 @@ with open ("Resources/election_data.csv", newline='') as file:
 
 
                 if candidates_with_votes > 50:
-                    print('The winner is {candidates_with_votes}')
+                    print('{candidates_with_votes}')
 
-                    print(candidates_with_votes)
+output_file = os.path.join("../Analysis", "output", "new.csv")
         
